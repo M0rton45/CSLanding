@@ -3,6 +3,8 @@ export interface ServiceLink {
     text: string;
     link: string;
 }
+export const tel = "+48500000000"
+export const mail = "mail@gmail.com"
 
 export const services: ServiceLink[] =[
     {
@@ -26,12 +28,14 @@ export interface HeroItem {
     title: string,
     description: string,
     emote?:string,
+    location?:string,
 }
 export const heroItems: HeroItem[] = [
     {
         id: "0",
         title: "Czysty dom, bez wysiłku",
         description: "Szybko, skutecznie i na twoją kieszeń.",
+        location: "Częstochowa i okolice",
     }
 ]
 export const infoItems: HeroItem[] = [
