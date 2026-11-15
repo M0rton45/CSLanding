@@ -1,3 +1,5 @@
+import { CalendarDays, LucideIcon} from "lucide-react";
+
 export interface ServiceLink {
     id: number;
     text: string;
@@ -27,7 +29,7 @@ export interface HeroItem {
     id: string,
     title: string,
     description: string,
-    emote?:string,
+    emote?:LucideIcon,
     location?:string,
 }
 export const heroItems: HeroItem[] = [
@@ -43,16 +45,19 @@ export const infoItems: HeroItem[] = [
         id: "0",
         title: "Sprzątanie regularne",
         description:"Co tydzień lub co dwa tygodnie.",
+        emote: CalendarDays,
     },
     {
         id: "1",
         title: "Generalne porządki",
-        description:"Jednorazowe sprzątanie przed imprezą czy swiętami.",
+        description:`Jednorazowe sprzątanie \n przed imprezą czy swiętami.`,
+        emote: CalendarDays,
     },
     {
         id: "2",
         title: "Sprzątanie po remoncie",
-        description:"Pył, plamy z farb lub innych materiałów budowlanych znikną."
+        description:"Pył, plamy z farb lub z innych \n materiałów budowlanych znikną.",
+        emote: CalendarDays,
     }
 
 ]
