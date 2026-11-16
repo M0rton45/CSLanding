@@ -14,15 +14,19 @@
 }
 @theme {
   --color-brand-bg: #FDF5F7;
-  --color-brand-pink: #EAB8C5;
+  --color-brand-pink: #F4C0D1;
   --color-brand-dark: #4C1C2B;
-  --color-brand-yellow: #FCE869;
-  --color-brand-accent: #D24D7B;
+  --color-brand-yellow: #FFD95A;
+  --color-brand-accent: #993556;
+  --color-brand-white: #FFFFFF;
+  --color-brand-icons: #D4537E;
+  --color-brand-maintext: #4B1528;
+  --color-brand-subtext: #72243E;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #FFFFFF;
+    --background: #FBEAF0;
     /* --foreground: #EAB8C5; */
     --foreground: var(--color-brand-dark);
   }
@@ -36,7 +40,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -50,4 +54,10 @@ body::before {
   background-repeat: no-repeat;
   background-blend-mode: color, normal;
   opacity: 0.08;
+} */
+@keyframes bubble {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 1; }
+  100% { transform: translateY(-650px); opacity: 0; }
 }
+.bubble { animation: bubble 10s ease-in infinite; }
